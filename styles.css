@@ -854,3 +854,21 @@ footer {
   .footer-inner { flex-direction: column; text-align: center; }
   .section-heading { margin-bottom: 32px; }
 }
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--cyan);
+  border: 1px solid rgba(0,224,255,0.2);
+  padding: 5px 12px;
+  border-radius: 4px;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+.project-link:hover {
+  background: rgba(0,224,255,0.08);
+  border-color: var(--cyan);
+}
