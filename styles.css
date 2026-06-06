@@ -854,6 +854,7 @@ footer {
   .footer-inner { flex-direction: column; text-align: center; }
   .section-heading { margin-bottom: 32px; }
 }
+
 .project-link {
   display: inline-flex;
   align-items: center;
@@ -869,6 +870,30 @@ footer {
   text-decoration: none;
 }
 .project-link:hover {
+  background: rgba(0,224,255,0.08);
+  border-color: var(--cyan);
+}
+
+/* ============================================================
+   CERTIFICATE VIEW BUTTON
+   ============================================================ */
+.cert-view-btn {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  padding: 4px 10px;
+  background: transparent;
+  border: 1px solid rgba(0,224,255,0.2);
+  color: var(--cyan);
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: all var(--transition);
+  white-space: nowrap;
+  align-self: center;
+}
+.cert-view-btn:hover {
   background: rgba(0,224,255,0.08);
   border-color: var(--cyan);
 }
