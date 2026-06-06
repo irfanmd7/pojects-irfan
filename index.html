@@ -335,6 +335,8 @@
       </div>
     </div>
   </section>
+
+  <!-- CERTIFICATIONS -->
   <section id="certifications" class="section">
     <div class="container">
       <div class="section-label" data-animate="fade-up">05 — Recognition</div>
@@ -354,48 +356,61 @@
         <div data-animate="fade-up" data-delay="250">
           <h3 class="ach-group-title">📜 Certifications</h3>
           <div class="cert-list">
-            <div class="cert-card">
+
+            <div class="cert-card" data-cert="cert_cybersecurity.pdf">
               <div class="cert-icon">🔐</div>
               <div>
                 <div class="cert-name">Cybersecurity</div>
                 <div class="cert-org">Infoziant — Vulnerability Assessment, Ethical Hacking, Network Security</div>
               </div>
+              <button class="cert-view-btn">View</button>
             </div>
-            <div class="cert-card">
+
+            <div class="cert-card" data-cert="cert_wadhwani.pdf">
               <div class="cert-icon">🌐</div>
               <div>
                 <div class="cert-name">Wadhwani Ignite India</div>
                 <div class="cert-org">WF Global — Entrepreneurship &amp; Innovation</div>
               </div>
+              <button class="cert-view-btn">View</button>
             </div>
-            <div class="cert-card">
+
+            <div class="cert-card" data-cert="cert_hr_payroll.pdf">
               <div class="cert-icon">💼</div>
               <div>
                 <div class="cert-name">Human Resources: Payroll</div>
                 <div class="cert-org">LinkedIn Learning</div>
               </div>
+              <button class="cert-view-btn">View</button>
             </div>
-            <div class="cert-card">
+
+            <div class="cert-card" data-cert="cert_fortinet.pdf">
               <div class="cert-icon">🛡️</div>
               <div>
                 <div class="cert-name">Fortinet Certified Associate in Cybersecurity</div>
                 <div class="cert-org">Fortinet</div>
               </div>
+              <button class="cert-view-btn">View</button>
             </div>
-            <div class="cert-card">
+
+            <div class="cert-card" data-cert="cert_cisco_networking.pdf">
               <div class="cert-icon">🌐</div>
               <div>
                 <div class="cert-name">Networking Basics</div>
                 <div class="cert-org">Cisco</div>
               </div>
+              <button class="cert-view-btn">View</button>
             </div>
-            <div class="cert-card">
+
+            <div class="cert-card" data-cert="cert_one_million_prompters.pdf">
               <div class="cert-icon">🤖</div>
               <div>
                 <div class="cert-name">One Million Prompters</div>
                 <div class="cert-org">Dubai Centre for Artificial Intelligence &amp; Dubai Future Foundation</div>
               </div>
+              <button class="cert-view-btn">View</button>
             </div>
+
           </div>
         </div>
       </div>
@@ -454,6 +469,28 @@
           View Resume
         </a>
         <a href="Resume_MohamedIrfanMY.pdf" download class="btn btn-ghost modal-action-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download PDF
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATE MODAL -->
+  <div class="modal-overlay" id="certModal">
+    <div class="modal-box">
+      <button class="modal-close" id="certModalClose" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-icon">📜</div>
+      <h3 class="modal-title" id="certModalTitle">Certificate</h3>
+      <p class="modal-desc">View or download this certificate.</p>
+      <div class="modal-actions">
+        <a id="certViewBtn" href="#" target="_blank" class="btn btn-primary modal-action-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          View Certificate
+        </a>
+        <a id="certDownloadBtn" href="#" download class="btn btn-ghost modal-action-btn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download PDF
         </a>
