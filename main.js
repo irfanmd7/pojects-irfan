@@ -184,4 +184,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(sec => sectionObserver.observe(sec));
 
+  /* ----------------------------------------------------------
+     7. CERTIFICATE MODAL
+  ---------------------------------------------------------- */
+  const certModal      = document.getElementById('certModal');
+  const certModalClose = document.getElementById('certModalClose');
+  const certModalTitle = document.getElementById('certModalTitle');
+  const certViewBtn    = document.getElementById('certViewBtn');
+  const certDownloadBtn = document.getElementById('certDownloadBtn');
+
+  function openCertModal(certFile, certName) {
+    certModalTitle.textContent = certName;
+    certViewBtn.href     = certFile;
+    certDownloadBtn.href = certFile;
+    certModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeCertModal() {
+    certModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  certModalClose.addEventListener('click', closeCertModal);
+
+  // Close on backdrop click
+  certModal.addEventListener('click', (e) => {
+    if (e.target === certModal) closeCertModal();
+  });
+
+  // Close on Escape key (works for both modals)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && certModal.classList.contains('open')) closeCertModal();
+  });
+
+  // Attach click handler to every cert card's View button
+  document.querySelectorAll('.cert-card').forEach(card => {
+    const btn = card.querySelector('.cert-view-btn');
+    if (!btn) return;
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const certFile = card.dataset.cert;
+      const certName = card.querySelector('.cert-name').textContent;
+      openCertModal(certFile, certName);
+    });
+  });
+
 });
