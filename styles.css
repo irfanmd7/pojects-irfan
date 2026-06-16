@@ -689,6 +689,20 @@ strong { color: var(--text); font-weight: 600; }
 .cert-org { font-size: 0.78rem; color: var(--muted2); line-height: 1.4; }
 
 /* ============================================================
+   DIGITAL BADGES
+   ============================================================ */
+.badges-section { margin-top: 8px; }
+.badges-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+}
+@media (max-width: 768px) {
+  .badges-grid { justify-content: center; }
+}
+
+/* ============================================================
    CONTACT
    ============================================================ */
 .contact-center { max-width: 600px; margin: 0 auto; text-align: center; }
